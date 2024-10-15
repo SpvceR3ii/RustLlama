@@ -1,13 +1,12 @@
 // Configuration Module
 use serde::Deserialize;
-use std::{error::Error, fs::File, io::{BufReader}};
+use std::{error::Error, fs::File, io::BufReader};
 
 #[derive(Deserialize, Debug)]
 pub struct Config {
     pub model_name: String,
     pub do_streaming: bool,
-    pub system_prompt: String, 
-    pub debug_mode: bool,
+    pub system_prompt: String,
 }
 
 pub fn load_config(path: &str) -> Result<Config, Box<dyn Error>> {
