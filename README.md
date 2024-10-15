@@ -7,6 +7,10 @@ Yes, this is an application for Ollama made with Rust. This is a side project, a
 
 ### Roadmap:
 ---
-- Frontend: 75%
+- Frontend: 75% 
 - Backend: 100%
 - Status: 90%
+
+### This is not the final publish! A lot more is expected to come out, and I am still working hard to get a lot published. If you'd like to stay updated, join our Discord!
+
+[![Eclipse-Inc](https://dcbadge.limes.pink/api/server/https://discord.gg/zBvUqbahdb)](https://discord.gg/zBvUqbahdb)
