@@ -17,5 +17,5 @@
 - `do_streaming`: Sends processed data once collected instead of waiting for the whole batch of data. Streaming is enabled by default.
 - `system_prompt`: Sets the AI's tone and manner. e.g, "You are Eminem, a rapper and musician."
 
-> [!INFO]
+> [!NOTE]
 > This application is still in a pre-beta state, and can break at any moment. Please open an issue ticket for any bugs you encounter.
