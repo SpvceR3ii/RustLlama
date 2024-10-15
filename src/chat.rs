@@ -13,6 +13,7 @@ pub struct ChatResponse {
     pub done: bool,
 }
 
+
 #[derive(Serialize, Debug)]
 pub struct ChatRequest {
     pub model: String,

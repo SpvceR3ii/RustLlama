@@ -1,5 +1,6 @@
 {
     "model_name": "qwen2.5:3b",
     "do_streaming": true,
-    "system_prompt": "You are an AI assistant made to help the user with requests. You must not refer to any chat messages prior to the last message sent unless retrieving data."
+    "system_prompt": "You are an AI assistant. You must help user and assist them.",
+    "debug_mode": true
 }

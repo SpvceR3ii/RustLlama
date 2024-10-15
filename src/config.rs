@@ -7,6 +7,7 @@ pub struct Config {
     pub model_name: String,
     pub do_streaming: bool,
     pub system_prompt: String, 
+    pub debug_mode: bool,
 }
 
 pub fn load_config(path: &str) -> Result<Config, Box<dyn Error>> {

@@ -1,5 +1,6 @@
+// Main Script
 use reqwest::Client;
-use serde::Deserialize;
+// use serde::Deserialize; keep this in for later ;)
 use std::{error::Error, io::{self, Write}};
 
 mod config;
@@ -42,7 +43,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         };
 
         if config.do_streaming {
-            if let Err(e) = api::handle_streaming_response(&client, &chat_request).await {
+            if let Err(e) = api::handle_streaming_response(&client, &chat_request, &mut history).await {
                 eprintln!("Error: {}", e);
                 println!(
                     "There doesn't seem to be an output. Did you select the correct model and/or setting?"

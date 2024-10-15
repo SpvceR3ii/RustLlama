@@ -15,6 +15,7 @@ pub struct StreamChunk {
 pub async fn handle_streaming_response(
     client: &Client,
     request: &ChatRequest,
+    history: &mut Vec<ChatMessage>, 
 ) -> Result<(), Box<dyn Error>> {
     let mut resp = client
         .post("http://localhost:11434/api/chat")
@@ -37,6 +38,12 @@ pub async fn handle_streaming_response(
                 print!("{}", message.content);
                 io::stdout().flush()?;
                 has_output = true;
+
+                // add in the assistants response to the history
+                history.push(ChatMessage {
+                    role: "assistant".to_string(),
+                    content: message.content.clone(),
+                });
             }
 
             if stream_chunk.done {
@@ -70,6 +77,7 @@ pub async fn handle_non_streaming_response(
 
     println!("Assistant: {}", resp.message.content);
 
+    // turns out the assistant is a bitch and didnt want to record it's history 
     history.push(ChatMessage {
         role: "assistant".to_string(),
         content: resp.message.content.clone(),
