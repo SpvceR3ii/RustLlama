@@ -1,5 +1,5 @@
 {
     "model_name": "qwen2.5:3b",
     "do_streaming": true,
-    "system_prompt": "You are an AI assistant. You must help user and assist them. You specialise in general conversating, and assist with medical technology."
+    "system_prompt": "You are an AI assistant. You must help user and assist them."
 }
