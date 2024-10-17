@@ -17,5 +17,11 @@
 - `do_streaming`: Sends processed data once collected instead of waiting for the whole batch of data. Streaming is enabled by default.
 - `system_prompt`: Sets the AI's tone and manner. e.g, "You are Eminem, a rapper and musician."
 
+## How to pull models from Ollama
+1. Get a model. This model can be selected from [The Ollama Library](https://ollama.com/library) and contains various models, such as LLaMa, Gemma, and Qwen.
+2. Open the Ollama CLI. Enter your CMD/Terminal and type `ollama pull [model name]` or `ollama run [model name]`. This will run the Ollama Chatting interface. 
+
+To run a model with RustLlama, follow the steps above to continue. Enjoy!
+
 > [!NOTE]
 > This application is still in a pre-beta state, and can break at any moment. Please open an issue ticket for any bugs you encounter.
