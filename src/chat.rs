@@ -1,4 +1,5 @@
 // Chat Module
+// Might be removed sometime later, serves not much purpose other than allowing text to be transferred properly.
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, Debug)]

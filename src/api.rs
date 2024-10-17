@@ -1,4 +1,5 @@
 // API Module
+// Contacts the Ollama API and tells it to generate text.
 use reqwest::Client;
 use serde::Deserialize; 
 use std::{error::Error, io};
@@ -77,7 +78,7 @@ pub async fn handle_non_streaming_response(
 
     println!("Assistant: {}", resp.message.content);
 
-    // turns out the assistant is a bitch and didnt want to record it's history 
+    // Ensures that the assistant has its history logged
     history.push(ChatMessage {
         role: "assistant".to_string(),
         content: resp.message.content.clone(),

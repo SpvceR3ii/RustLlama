@@ -1,4 +1,5 @@
 // Configuration Module
+// This module ensures the configuration file is loaded in for the rest of the peripherals.
 use serde::Deserialize;
 use std::{error::Error, fs::File, io::BufReader};
 

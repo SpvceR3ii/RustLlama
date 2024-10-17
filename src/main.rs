@@ -1,13 +1,13 @@
 // Main Script
 use reqwest::Client;
-// use serde::Deserialize; keep this in for later ;)
+// use serde::Deserialize; keep this in for later ;) [Will be scrapped lmao]
 use std::{error::Error, io::{self, Write}};
 
 mod config;
 mod chat;
 mod api;
 
-// 7-4: ...LIKE ANTENNAS TO HEAVEN
+// 7-4: ...LIKE ANTENNAS TO HEAVEN (Get the ULTRAKILL reference??? No? Wow.)
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     let config = config::load_config("config/config.json")?;
